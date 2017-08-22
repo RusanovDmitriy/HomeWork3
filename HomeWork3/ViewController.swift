@@ -15,7 +15,22 @@ class ViewController: UIViewController {
 
         let day = 34
         print(whatADay(day: day))
-
+        print("========================================================")
+        print("========================================================")
+        print("String Easy 2")
+        let name = "Dmitriy"
+        print("In name \(name) \(howMuchCharInMyName(name: name)) charters")
+        print("========================================================")
+        print("========================================================")
+        print("String Easy 3")
+        let firstName = "Dmitriy"
+        let lastName = "Rusanov"
+        print("Username for Dmitriy Rusanov : \(createUsername(firstName: firstName, lastName: lastName))")
+        print("========================================================")
+        print("========================================================")
+        print("String Easy 4")
+        let firstAndMiddleName = "Дмитрий Владимирович"
+        print(suffixOfMiddleName(firstAndMiddleName: firstAndMiddleName))
     }
     // Блок 0 Самостоятельная работа
     /* Написать метод, в который передается номер дня (1-7) и в консоль выводится день недели (Понед - Воскр)
@@ -46,6 +61,31 @@ class ViewController: UIViewController {
     }
 
 
-
+    // Блок 1 String Easy
+    // 2
+    /* Создать строку со своим именем. Написать метод который получает это имя и возвращает кол-во символов в строке с вашим именем. Возвращенное значение показать в консоль
+     */
+    func howMuchCharInMyName (name: String) -> Int {
+        return name.characters.count
+    }
+    // Блок 1 String Easy
+    // 3
+    /* Написать метод который принимает 2 слова, например имя и фамилию, возвращает юзернейм который имеет буквы нижнего регистра и разделяет имя и фамилию символом “_”
+     */
+    func createUsername (firstName: String, lastName: String) -> String {
+        return firstName.lowercased() + "_" + lastName.lowercased()
+    }
+    // Блок 1 String Easy
+    // 4
+    /* Cоздать строку с именем и своим отчеством. Создать метод который проверит его на окончание “ич/на”. Выводит фразу “имеет окончание “ич”” (или “на”).
+     Подсказка: в классе написан метод который позволяет проверить на суффикс или префикс, найдите и используйте его
+     */
+    func suffixOfMiddleName(firstAndMiddleName: String) -> String {
+        if  firstAndMiddleName.hasSuffix("ич") || firstAndMiddleName.hasSuffix("на") {
+            return "Имеет окончание 'ич' (или 'на')"
+        } else {
+            return "Не имеет окончание 'ич' (или 'на')"
+        }
+    }
 }
 
