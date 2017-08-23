@@ -112,7 +112,13 @@ class ViewController: UIViewController {
      Создать массив с любыми значениями типа строка. Создать метод который будет принимать как аргумент массив. Метод должен возвращать массив который состоит из первого и последнего элемента массива, который был параметром
      */
     func firstAndLastOfArray(array: Array<String>) -> Array<String> {
-        let newArray: Array<String> = [array.first!, array.last!]
+        var newArray: [String] = []
+        if let nonOptionalFirstElement = array.first {
+            newArray.append(nonOptionalFirstElement)
+        }
+        if let nonOptionalLastElement = array.last {
+            newArray.append(nonOptionalLastElement)
+        }
         return newArray
     }
     // Блок 3 Collections Easy
