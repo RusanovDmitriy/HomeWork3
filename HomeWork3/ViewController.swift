@@ -13,13 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let day = 34
-        print(whatADay(day: day))
+        let justDay = 34
+        print(whatADay(day: justDay))
         print("========================================================")
         print("========================================================")
         print("String Easy 2")
-        let name = "Dmitriy"
-        print("In name \(name) \(howMuchCharInMyName(name: name)) charters")
+        let myName = "Dmitriy"
+        print("In name \(myName) \(howMuchCharInMyName(name: myName)) charters")
         print("========================================================")
         print("========================================================")
         print("String Easy 3")
