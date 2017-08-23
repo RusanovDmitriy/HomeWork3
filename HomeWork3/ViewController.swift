@@ -81,8 +81,16 @@ class ViewController: UIViewController {
      Подсказка: в классе написан метод который позволяет проверить на суффикс или префикс, найдите и используйте его
      */
     func suffixOfMiddleName(firstAndMiddleName: String) -> String {
+        
         let suffix = String(firstAndMiddleName.characters.suffix(2))
-        return "имеет окончание '\(suffix)'"
+        let newSuffix = suffix.lowercased()
+        if newSuffix == "ич" {
+            return "Мужик! Окончание: \(suffix)"
+        }
+        if newSuffix == "на" {
+            return "Женщина! Окончание: \(suffix)")
+        }
+        return "Окончание: '\(suffix)'"
 }
 
 }
